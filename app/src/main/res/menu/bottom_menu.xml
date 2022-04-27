@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/char_info"
+        app:showAsAction="always"
+        android:title="@string/char_info_title"
+        android:icon="@drawable/bottom_char_infos"
+        android:contentDescription="Character Info">
+    </item>
+
+    <item android:id="@+id/char_stats"
+        app:showAsAction="always"
+        android:title="@string/char_stats_title"
+        android:icon="@drawable/bottom_atributes"
+        android:contentDescription="Character Stats">
+    </item>
+
+    <item android:id="@+id/char_combat"
+        app:showAsAction="always"
+        android:title="@string/char_combate_title"
+        android:icon="@drawable/bottom_combat"
+        android:contentDescription="Character Abilities">
+    </item>
+
+    <item android:id="@+id/char_inventory"
+        app:showAsAction="always"
+        android:title="@string/char_inventory_title"
+        android:icon="@drawable/bottom_inventory"
+        android:contentDescription="Character Inventory">
+    </item>
+
+    <item android:id="@+id/char_notes"
+        app:showAsAction="always"
+        android:title="@string/char_noteblook_title"
+        android:icon="@drawable/bottom_noteblock"
+        android:contentDescription="Character Notes">
+    </item>
+
+</menu>
