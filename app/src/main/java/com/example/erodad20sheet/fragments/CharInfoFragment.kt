@@ -10,6 +10,7 @@ import com.example.erodad20sheet.R
 import com.google.android.material.snackbar.Snackbar
 import com.jaredrummler.materialspinner.MaterialSpinner
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_char_combat.*
 import kotlinx.android.synthetic.main.fragment_char_info.*
 
 
@@ -26,9 +27,6 @@ class CharInfoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val spinner = spinner as MaterialSpinner
-        spinner.setItems("Opção 1", "Opção 2", "Opção 3", "Opção 4", "Opção 5")
     }
 
     companion object {

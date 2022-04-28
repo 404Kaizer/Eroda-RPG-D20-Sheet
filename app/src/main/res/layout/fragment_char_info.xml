@@ -34,10 +34,4 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-    <com.jaredrummler.materialspinner.MaterialSpinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/top_tab_nav"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
