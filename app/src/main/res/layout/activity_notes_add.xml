@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotesAddActivity"
+    android:background="?attr/colorOnPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/dark_gray">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/return_home_btn"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_return_mainscreen"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Eroda"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="30dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText android:inputType="text" android:importantForAutofill="no"
+        android:id="@+id/title_entry"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:hint="Título"
+        android:background="#807C7C7C"
+        android:padding="8dp"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText android:inputType="textMultiLine" android:importantForAutofill="no"
+        android:id="@+id/desc_entry"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="start|top"
+        android:hint="Nota"
+        android:background="#807C7C7C"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/title_entry"
+        app:layout_constraintBottom_toTopOf="@id/save_note_float_btn"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_note_float_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:contentDescription="Adicionar Nota"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/ic_save_note"
+        app:maxImageSize="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

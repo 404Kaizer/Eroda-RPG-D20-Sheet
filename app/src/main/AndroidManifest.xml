@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ErodaD20Sheet">
         <activity
+            android:name=".NotesAddActivity"
+            android:exported="false" />
+        <activity
             android:name=".CharacterSheetActivity"
             android:exported="false" />
         <activity

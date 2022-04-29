@@ -157,16 +157,16 @@
                     android:text="Defesa"
                     android:textSize="20sp"/>
 
-                <com.jaredrummler.materialspinner.MaterialSpinner
-                    android:id="@+id/defense_type_spinner"
+                <androidx.appcompat.widget.AppCompatEditText android:inputType="textMultiLine" android:importantForAutofill="no"
+                    android:id="@+id/defense_input"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/defense_title"
+                    android:layout_height="42dp"
                     android:layout_marginVertical="10dp"
-                    app:ms_padding_right="0dp"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    app:ms_background_color="#272727"/>
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:hint="Tipo de Defesa"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/defense_title"/>
 
                 <androidx.appcompat.widget.AppCompatEditText android:inputType="textMultiLine" android:importantForAutofill="no"
                     android:id="@+id/defense_type_input"
@@ -177,7 +177,7 @@
                     android:gravity="center"
                     android:hint="Classe de Armadura"
                     android:textSize="20sp"
-                    app:layout_constraintTop_toBottomOf="@id/defense_type_spinner"/>
+                    app:layout_constraintTop_toBottomOf="@id/defense_input"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/speed_title"
@@ -228,7 +228,8 @@
                 <androidx.appcompat.widget.AppCompatEditText android:inputType="textMultiLine" android:importantForAutofill="no"
                     android:id="@+id/abilities_input"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
                     android:layout_marginVertical="10dp"
                     android:gravity="start|top"
                     android:fadeScrollbars="false"
@@ -268,7 +269,8 @@
                 <androidx.appcompat.widget.AppCompatEditText android:inputType="textMultiLine" android:importantForAutofill="no"
                     android:id="@+id/weapons_input"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
                     android:layout_marginVertical="10dp"
                     android:gravity="start|top"
                     android:fadeScrollbars="false"
@@ -308,7 +310,8 @@
                 <androidx.appcompat.widget.AppCompatEditText android:inputType="textMultiLine" android:importantForAutofill="no"
                     android:id="@+id/spells_input"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
                     android:layout_marginVertical="10dp"
                     android:gravity="start|top"
                     android:fadeScrollbars="false"
