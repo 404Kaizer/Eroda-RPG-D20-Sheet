@@ -7,7 +7,7 @@
     tools:context=".fragments.CharInfoFragment">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/top_tab_nav"
+        android:id="@+id/info_tab_nav"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="0dp"
@@ -38,6 +38,13 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/top_tab_nav"/>
+        app:layout_constraintTop_toBottomOf="@id/info_tab_nav"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/tab_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
