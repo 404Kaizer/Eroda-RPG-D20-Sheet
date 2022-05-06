@@ -17,8 +17,8 @@ class NotesAdapter(private val notesList: ArrayList<NotesDataClass>)
             private val descriptionTextView : TextView = itemView.findViewById(R.id.note_description)
 
             fun populateAdapter(notes: NotesDataClass) {
-                titleTextView.text = notes.title.toString()
-                descriptionTextView.text = notes.description.toString()
+                titleTextView.text = notes.title
+                descriptionTextView.text = notes.description
             }
         }
 

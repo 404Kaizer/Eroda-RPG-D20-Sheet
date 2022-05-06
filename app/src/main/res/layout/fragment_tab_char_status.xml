@@ -1,14 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.TabCharStatusFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TabCharStatusFragment"
+    android:fillViewport="true"
+    android:clipToPadding="false">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="10dp">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/status_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/defenses_container"
+            android:padding="10dp"
+            android:background="@color/dark_gray">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/life_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Vida"
+                android:textSize="20sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/life_bar"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toBottomOf="@id/life_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/red"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:hint="0 / 0"
+                android:text="0 / 0"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sanity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/life_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Sanidade"
+                android:textSize="20sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/sanity_bar"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toBottomOf="@id/sanity_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/purple"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:hint="0 / 0"
+                android:text="0 / 0"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mana_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/sanity_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Energia"
+                android:textSize="20sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mana_bar"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toBottomOf="@id/mana_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:hint="0 / 0"
+                android:text="0 / 0"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defenses_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/status_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginVertical="15dp"
+            android:padding="10dp"
+            android:background="@color/dark_gray">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/defense_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Defesa"
+                android:textSize="20sp"/>
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/protection_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                app:layout_constraintTop_toBottomOf="@id/defense_title"
+                android:layout_marginVertical="10dp"
+                app:ms_padding_right="0dp"
+                android:textAlignment="center"
+                android:textSize="18sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText android:inputType="textMultiLine" android:importantForAutofill="no"
+                android:id="@+id/defense_type_input"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginVertical="5dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:hint="Classe de Armadura"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/protection_type_spinner"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/speed_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/defense_type_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginVertical="10dp"
+                android:text="Deslocamento"
+                android:textSize="20sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText android:inputType="textMultiLine" android:importantForAutofill="no"
+                android:id="@+id/speed_input"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginVertical="10dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:hint="Deslocamento"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/speed_title"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

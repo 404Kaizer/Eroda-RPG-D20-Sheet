@@ -1,14 +1,485 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.TabCharAtributesFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TabCharAtributesFragment"
+    android:fillViewport="true"
+    android:clipToPadding="false">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginHorizontal="10dp">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/str_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/des_container"
+            android:padding="10dp"
+            android:background="@color/dark_gray">
+
+            <TextView
+                android:id="@+id/str_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"
+                android:text="Força"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/str_mod_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/str_value"
+                app:layout_constraintStart_toEndOf="@id/str_value"
+                app:layout_constraintBottom_toBottomOf="@id/str_value"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="20sp"
+                android:text="+0"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"/>
+
+            <EditText android:importantForAutofill="no" android:inputType="number"
+                android:id="@+id/str_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/str_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@null"
+                android:padding="0dp"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:hint="10"
+                android:text="10"
+                android:textColorHint="@color/teal_700"
+                android:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/decrease_str_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/str_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/str_value"
+                app:layout_constraintBottom_toBottomOf="@id/str_value"
+                android:src="@drawable/ic_decrease"
+                android:clickable="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/increase_str_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/str_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/str_value"
+                app:layout_constraintBottom_toBottomOf="@id/str_value"
+                android:src="@drawable/ic_add_drawable"
+                android:clickable="true"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/des_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/str_container"
+            app:layout_constraintBottom_toTopOf="@id/con_container"
+            android:padding="10dp"
+            android:elevation="3dp"
+            android:background="@color/dark_gray">
+
+            <TextView
+                android:id="@+id/des_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"
+                android:text="Destreza"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/des_mod_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/des_value"
+                app:layout_constraintStart_toEndOf="@id/des_value"
+                app:layout_constraintBottom_toBottomOf="@id/des_value"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="20sp"
+                android:text="+0"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"/>
+
+            <EditText android:importantForAutofill="no" android:inputType="number"
+                android:id="@+id/des_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/des_title"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:backgroundTint="@color/white"
+                android:background="@null"
+                android:padding="0dp"
+                android:hint="10"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textColorHint="@color/teal_700"
+                android:textSize="32sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/decrease_des_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/des_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/des_value"
+                app:layout_constraintBottom_toBottomOf="@id/des_value"
+                android:src="@drawable/ic_decrease"
+                android:clickable="true" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/increase_des_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/des_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/des_value"
+                app:layout_constraintBottom_toBottomOf="@id/des_value"
+                android:src="@drawable/ic_add_drawable"
+                android:clickable="true"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/des_container"
+            app:layout_constraintBottom_toTopOf="@id/int_container"
+            android:padding="10dp"
+            android:elevation="3dp"
+            android:background="@color/dark_gray">
+
+            <TextView
+                android:id="@+id/con_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"
+                android:text="Constituição"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/con_mod_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/con_value"
+                app:layout_constraintStart_toEndOf="@id/con_value"
+                app:layout_constraintBottom_toBottomOf="@id/con_value"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="20sp"
+                android:text="+0"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"/>
+
+            <EditText android:importantForAutofill="no" android:inputType="number"
+                android:id="@+id/con_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/con_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@null"
+                android:padding="0dp"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:hint="10"
+                android:text="10"
+                android:textColorHint="@color/teal_700"
+                android:backgroundTint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/decrease_con_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/con_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/con_value"
+                app:layout_constraintBottom_toBottomOf="@id/con_value"
+                android:src="@drawable/ic_decrease"
+                android:clickable="true"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/increase_con_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/con_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/con_value"
+                app:layout_constraintBottom_toBottomOf="@id/con_value"
+                android:src="@drawable/ic_add_drawable"
+                android:clickable="true"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/int_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/con_container"
+            app:layout_constraintBottom_toTopOf="@id/sab_container"
+            android:padding="10dp"
+            android:elevation="3dp"
+            android:background="@color/dark_gray">
+
+            <TextView
+                android:id="@+id/int_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"
+                android:text="Inteligência"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/int_mod_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/int_value"
+                app:layout_constraintStart_toEndOf="@id/int_value"
+                app:layout_constraintBottom_toBottomOf="@id/int_value"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="20sp"
+                android:text="+0"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"/>
+
+            <EditText android:importantForAutofill="no" android:inputType="number"
+                android:id="@+id/int_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/int_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@null"
+                android:padding="0dp"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:hint="10"
+                android:text="10"
+                android:textColorHint="@color/teal_700"
+                android:backgroundTint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/decrease_int_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/int_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/int_value"
+                app:layout_constraintBottom_toBottomOf="@id/int_value"
+                android:src="@drawable/ic_decrease"
+                android:clickable="true"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/increase_int_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/int_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/int_value"
+                app:layout_constraintBottom_toBottomOf="@id/int_value"
+                android:src="@drawable/ic_add_drawable"
+                android:clickable="true"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sab_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/int_container"
+            app:layout_constraintBottom_toTopOf="@id/car_container"
+            android:padding="10dp"
+            android:elevation="3dp"
+            android:background="@color/dark_gray">
+
+            <TextView
+                android:id="@+id/sab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"
+                android:text="Sabedoria"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sab_mod_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/sab_value"
+                app:layout_constraintStart_toEndOf="@id/sab_value"
+                app:layout_constraintBottom_toBottomOf="@id/sab_value"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="20sp"
+                android:text="+0"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"/>
+
+            <EditText android:importantForAutofill="no" android:inputType="number"
+                android:id="@+id/sab_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/sab_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@null"
+                android:padding="0dp"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:hint="10"
+                android:text="10"
+                android:textColorHint="@color/teal_700"
+                android:backgroundTint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/decrease_sab_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/sab_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/sab_value"
+                app:layout_constraintBottom_toBottomOf="@id/sab_value"
+                android:src="@drawable/ic_decrease"
+                android:clickable="true"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/increase_sab_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/sab_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sab_value"
+                app:layout_constraintBottom_toBottomOf="@id/sab_value"
+                android:src="@drawable/ic_add_drawable"
+                android:clickable="true"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/car_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sab_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="10dp"
+            android:elevation="3dp"
+            android:background="@color/dark_gray">
+
+            <TextView
+                android:id="@+id/car_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="20sp"
+                android:text="Carisma"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/car_mod_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/car_value"
+                app:layout_constraintStart_toEndOf="@id/car_value"
+                app:layout_constraintBottom_toBottomOf="@id/car_value"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="20sp"
+                android:text="+0"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"/>
+
+            <EditText android:importantForAutofill="no" android:inputType="number"
+                android:id="@+id/car_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/car_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@null"
+                android:padding="0dp"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:hint="10"
+                android:text="10"
+                android:textColorHint="@color/teal_700"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/decrease_car_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/car_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/car_value"
+                app:layout_constraintBottom_toBottomOf="@id/car_value"
+                android:src="@drawable/ic_decrease"
+                android:clickable="true"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/increase_car_value"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toTopOf="@id/car_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_value"
+                app:layout_constraintBottom_toBottomOf="@id/car_value"
+                android:src="@drawable/ic_add_drawable"
+                android:clickable="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

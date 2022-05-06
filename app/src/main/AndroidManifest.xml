@@ -11,10 +11,12 @@
         android:theme="@style/Theme.ErodaD20Sheet">
         <activity
             android:name=".NotesAddActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".CharacterSheetActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

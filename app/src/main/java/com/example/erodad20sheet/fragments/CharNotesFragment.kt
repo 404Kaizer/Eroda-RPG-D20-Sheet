@@ -27,11 +27,7 @@ class CharNotesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_char_notes, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val view = inflater.inflate(R.layout.fragment_char_notes, container, false)
 
         val note = NotesDataClass("Titulo", "Lorem ipsum dolor enet manituo")
         val notesArrayList = arrayListOf(note, note, note, note, note, note, note, note, note, note, note, note, note, note,
@@ -39,6 +35,12 @@ class CharNotesFragment : Fragment() {
         val notesRecyclerView = view.findViewById(R.id.notes_recycler) as RecyclerView
         notesRecyclerView.layoutManager = LinearLayoutManager(view.context)
         notesRecyclerView.adapter = NotesAdapter(notesArrayList)
+
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         add_note_fab.setOnClickListener {
             val intent = Intent(view.context, NotesAddActivity::class.java)

@@ -1,11 +1,13 @@
 package com.example.erodad20sheet
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.erodad20sheet.fragments.*
 import kotlinx.android.synthetic.main.activity_character_sheet.*
+
 
 class CharacterSheetActivity : AppCompatActivity() {
 
@@ -55,9 +57,13 @@ class CharacterSheetActivity : AppCompatActivity() {
     }
 
     private fun setCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_frame, fragment)
-            commit()
-        }
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_frame, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }
