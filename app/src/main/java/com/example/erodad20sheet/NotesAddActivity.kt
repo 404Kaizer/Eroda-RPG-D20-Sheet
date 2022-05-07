@@ -12,13 +12,11 @@ class NotesAddActivity : AppCompatActivity() {
         setContentView(R.layout.activity_notes_add)
 
         return_home_btn.setOnClickListener {
-            val intent = Intent(this, CharacterSheetActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
         save_list_item_float_btn.setOnClickListener {
-            val intent = Intent(this, CharacterSheetActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }
