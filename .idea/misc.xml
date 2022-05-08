@@ -5,10 +5,17 @@
       <map>
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_character_sheet.xml" value="0.25" />
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_main.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_notes_add.xml" value="0.25" />
+        <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_characters.xml" value="0.25" />
+        <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_notes.xml" value="0.264" />
+        <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_powers.xml" value="0.25" />
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adaptes_notes.xml" value="0.25" />
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_combat.xml" value="0.25" />
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_info.xml" value="0.25" />
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_notes.xml" value="0.25" />
+        <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_powers.xml" value="0.25" />
+        <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_status.xml" value="0.25" />
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
       </map>
     </option>
