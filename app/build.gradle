@@ -33,6 +33,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.example.erodad20sheet'
 }
 
 dependencies {

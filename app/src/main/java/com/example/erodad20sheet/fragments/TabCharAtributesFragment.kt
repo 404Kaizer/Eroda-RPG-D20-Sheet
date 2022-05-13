@@ -1,6 +1,5 @@
 package com.example.erodad20sheet.fragments
 
-import android.icu.number.NumberFormatter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,12 +7,9 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.erodad20sheet.R
-import org.w3c.dom.Text
 import kotlin.math.floor
-import kotlin.math.round
 
 class TabCharAtributesFragment : Fragment() {
 
