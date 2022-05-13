@@ -11,16 +11,16 @@ import com.example.erodad20sheet.models.NotesDataClass
 class NotesAdapter(private val notesList: ArrayList<NotesDataClass>)
     : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
 
-        class NotesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class NotesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-            private val titleTextView : TextView = itemView.findViewById(R.id.note_title)
-            private val descriptionTextView : TextView = itemView.findViewById(R.id.note_description)
+        private val titleTextView : TextView = itemView.findViewById(R.id.note_title)
+        private val descriptionTextView : TextView = itemView.findViewById(R.id.note_description)
 
-            fun populateAdapter(notes: NotesDataClass) {
-                titleTextView.text = notes.title
-                descriptionTextView.text = notes.description
-            }
+        fun populateAdapter(notes: NotesDataClass) {
+            titleTextView.text = notes.title
+            descriptionTextView.text = notes.description
         }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_notes, parent, false)

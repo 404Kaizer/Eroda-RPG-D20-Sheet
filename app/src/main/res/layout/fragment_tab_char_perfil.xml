@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/dark_gray"
-        android:layout_margin="10dp">
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="15dp">
 
         <TextView
             android:id="@+id/char_name"
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/char_img"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="Hazard Lefou"
             android:textStyle="bold"
             android:gravity="center"
@@ -68,8 +69,7 @@
             android:textColor="@color/white"
             android:hint="Escreva sua Tendência"
             android:textColorHint="@color/teal_700"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/white" />
 
         <EditText android:importantForAutofill="no" android:inputType="text"
             android:id="@+id/input3"
@@ -85,8 +85,7 @@
             android:textColor="@color/white"
             android:hint="Escreva sua Raça e Sexo"
             android:textColorHint="@color/teal_700"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/white" />
 
         <EditText android:importantForAutofill="no" android:inputType="text"
             android:id="@+id/input4"
@@ -102,8 +101,7 @@
             android:textColor="@color/white"
             android:hint="Escreva seu Tamanho e Idade"
             android:textColorHint="@color/teal_700"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/white" />
 
         <EditText android:importantForAutofill="no" android:inputType="text"
             android:id="@+id/input5"
@@ -120,8 +118,7 @@
             android:textColor="@color/white"
             android:hint="Escreva seus Idiomas Conhecidos"
             android:textColorHint="@color/teal_700"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -25,8 +25,7 @@ class CharacterSheetActivity : AppCompatActivity() {
         toolbar_title.text = "Personagem"
 
         return_home_btn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         bottom_menu.setOnNavigationItemSelectedListener {
@@ -57,10 +56,11 @@ class CharacterSheetActivity : AppCompatActivity() {
     }
 
     private fun setCurrentFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_frame, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment_frame, fragment)
+            addToBackStack(null)
+            commit()
+        }
     }
 
     override fun onBackPressed() {
