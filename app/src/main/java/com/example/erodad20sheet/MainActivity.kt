@@ -2,15 +2,12 @@ package com.example.erodad20sheet
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.erodad20sheet.adapters.CharactersAdapter
 import com.example.erodad20sheet.models.CharactersDataClass
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.adapter_characters.*
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,8 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val character = CharactersDataClass("Hazard Lefou", "Tiefling", "Necromante", 20)
-        val charactersArrayList = arrayListOf(character, character, character, character, character)
+        val character1 = CharactersDataClass(R.drawable.portrait_char3, "Hazard Lefou", "Tiefling", "Necromante", 5)
+        val character2 = CharactersDataClass(R.drawable.portrait_char2, "Liang Min", "Humano", "Monge", 11)
+        val character3 = CharactersDataClass(R.drawable.portrait_char1, "Daemon San", "Humano", "Samurai", 3)
+        val character4 = CharactersDataClass(R.drawable.portrait_char3, "Sombra", "Elfo", "Ladino", 9)
+        val character5 = CharactersDataClass(R.drawable.portrait_char2, "Kruk", "Orc", "Bárbaro", 15)
+        val character6 = CharactersDataClass(R.drawable.portrait_char1, "Leon Ebonheart", "Humano", "Guerreiro", 13)
+        val charactersArrayList = arrayListOf(character1, character2, character3, character4, character5, character6)
         val charactersRecyclerView = findViewById<RecyclerView>(R.id.char_list_recycler)
         charactersRecyclerView.layoutManager = LinearLayoutManager(this)
         charactersRecyclerView.adapter = CharactersAdapter(charactersArrayList)

@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="25dp"
+        android:layout_margin="18dp"
         android:src="@drawable/ic_add_drawable"
         android:backgroundTint="@color/red"
         app:rippleColor="@color/white"
