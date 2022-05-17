@@ -14,11 +14,17 @@ class PowersAdapter(private val powersList: ArrayList<PowersDataClass>)
     class PowersViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val titleTextView : TextView = itemView.findViewById(R.id.power_title)
+        private val typeTextView : TextView = itemView.findViewById(R.id.power_type)
+        private val costsTextView : TextView = itemView.findViewById(R.id.power_costs)
         private val descriptionTextView : TextView = itemView.findViewById(R.id.power_description)
+        private val buffsTextView : TextView = itemView.findViewById(R.id.power_buffs)
 
         fun populateAdapter(powers: PowersDataClass) {
             titleTextView.text = powers.title
+            typeTextView.text = powers.type
+            costsTextView.text = powers.costs
             descriptionTextView.text = powers.description
+            buffsTextView.text = powers.buffs
         }
     }
 

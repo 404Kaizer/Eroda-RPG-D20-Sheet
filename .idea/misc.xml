@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_character_sheet.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_notes_add.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_characters.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_notes.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_powers.xml" value="0.264" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_spells.xml" value="0.253125" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_combat.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_inventory.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_notes.xml" value="0.25416666666666665" />
@@ -16,6 +18,7 @@
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_powers.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_skills.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_spells.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_status.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_stored_items.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_weapons.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tvdsn/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_character_sheet.xml" value="0.25" />
