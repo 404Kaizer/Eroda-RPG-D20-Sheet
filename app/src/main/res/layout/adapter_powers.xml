@@ -30,7 +30,7 @@
             android:id="@+id/power_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/power_costs"
+            app:layout_constraintBottom_toTopOf="@id/power_execution"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/power_title"
             android:layout_marginHorizontal="5dp"
@@ -42,12 +42,26 @@
             android:textSize="14sp"/>
 
         <TextView
-            android:id="@+id/power_costs"
+            android:id="@+id/power_execution"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/power_type"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/power_costs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/power_execution"
             android:ellipsize="none"
             android:scrollHorizontally="false"
             android:text="Exemplo"

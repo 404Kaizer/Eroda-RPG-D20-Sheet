@@ -14,10 +14,12 @@ class NotesAdapter(private val notesList: ArrayList<NotesDataClass>)
     class NotesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val titleTextView : TextView = itemView.findViewById(R.id.note_title)
+        private val priotiryTextView : TextView = itemView.findViewById(R.id.note_priority)
         private val descriptionTextView : TextView = itemView.findViewById(R.id.note_description)
 
         fun populateAdapter(notes: NotesDataClass) {
             titleTextView.text = notes.title
+            priotiryTextView.text = notes.priority
             descriptionTextView.text = notes.description
         }
     }
