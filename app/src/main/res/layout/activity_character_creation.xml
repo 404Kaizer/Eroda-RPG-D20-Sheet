@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotesAddActivity"
+    android:background="?attr/colorOnPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/dark_gray">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/return_home_btn"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_return_mainscreen"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Novo Personagem"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="30dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="90dp"
+        android:clipToPadding="false">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/name_entry_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Nome"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@color/dark_gray"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/char_name_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Faradick Grom"
+                android:textColorHint="@color/gray"
+                android:background="@color/dark_gray"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/exp_entry_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Nível e Experiência"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@color/dark_gray"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/char_exp_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Nível 3 e 900 EXP "
+                android:textColorHint="@color/gray"
+                android:background="@color/dark_gray"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/race_sex_entry_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Raça e Sexo"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@color/dark_gray"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/char_race_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Anão, Masculino"
+                android:textColorHint="@color/gray"
+                android:background="@color/dark_gray"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/class_origin_entry_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Classe e Antecedente"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@color/dark_gray"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/char_origin_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Clérigo e Eremita"
+                android:textColorHint="@color/gray"
+                android:background="@color/dark_gray"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/stature_entry_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Peso, Altura e Idade"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@color/dark_gray"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/char_stature_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:hint="80kg, 1,36m e 70 anos"
+                android:textColorHint="@color/gray"
+                android:background="@color/dark_gray"
+                android:padding="8dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/alignment_sex_entry_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Tendência"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@color/dark_gray"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/char_alignment_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:hint="Leal e Neutro"
+                android:textColorHint="@color/gray"
+                android:background="@color/dark_gray"
+                android:padding="8dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/languages_entry_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Idiomas Conhecidos"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@color/dark_gray"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/char_languages_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:hint="Comum, Anão e Élfico"
+                android:textColorHint="@color/gray"
+                android:background="@color/dark_gray"
+                android:padding="8dp"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_new_char_float_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="18dp"
+        android:contentDescription="Adicionar Nota"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/ic_save_drawable"
+        app:maxImageSize="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

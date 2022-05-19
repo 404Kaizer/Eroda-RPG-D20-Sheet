@@ -9,13 +9,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ErodaD20Sheet">
         <activity
+            android:name=".CharacterCreationActivity"
+            android:exported="false"
+            android:noHistory="true"/>
+        <activity
             android:name=".NotesAddActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CharacterSheetActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

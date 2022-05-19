@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.erodad20sheet.fragments.*
 import kotlinx.android.synthetic.main.activity_character_sheet.*
+import kotlinx.android.synthetic.main.fragment_tab_char_perfil.*
 
 
 class CharacterSheetActivity : AppCompatActivity() {
