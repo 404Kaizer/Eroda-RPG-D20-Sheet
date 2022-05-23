@@ -1,0 +1,4 @@
+package com.example.erodad20sheet.models
+
+data class WeaponsDataClass(val quantity: String, val title: String, val type: String, val damage: String, val execution: String,
+val description: String, val properties: String)

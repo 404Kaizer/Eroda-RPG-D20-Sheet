@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weapons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        android:background="@color/dark_gray"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/weapon_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="1x"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/weapon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/weapon_quantity"
+            app:layout_constraintTop_toTopOf="@id/weapon_quantity"
+            app:layout_constraintBottom_toBottomOf="@id/weapon_quantity"
+            android:layout_marginHorizontal="5dp"
+            android:text="Exemplo"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/weapon_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/weapon_damage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weapon_quantity"
+            android:layout_marginHorizontal="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/weapon_damage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weapon_type"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/weapon_execution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weapon_damage"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/weapon_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/weapon_execution"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/weapon_properties"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/weapon_properties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weapon_description"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete_weapon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_delete_drawable"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
