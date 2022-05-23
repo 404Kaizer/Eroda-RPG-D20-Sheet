@@ -45,9 +45,9 @@
             android:id="@+id/weapon_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/weapon_damage"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/weapon_quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/weapon_ammunition"
             android:layout_marginHorizontal="5dp"
             android:ellipsize="none"
             android:scrollHorizontally="false"
@@ -57,12 +57,26 @@
             android:textSize="14sp"/>
 
         <TextView
-            android:id="@+id/weapon_damage"
+            android:id="@+id/weapon_ammunition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/weapon_type"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/weapon_damage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weapon_ammunition"
             android:ellipsize="none"
             android:scrollHorizontally="false"
             android:text="Exemplo"
@@ -85,10 +99,24 @@
             android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/weapon_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weapon_execution"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
             android:id="@+id/weapon_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/weapon_execution"
+            app:layout_constraintTop_toBottomOf="@id/weapon_range"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/weapon_properties"
             android:layout_marginHorizontal="5dp"

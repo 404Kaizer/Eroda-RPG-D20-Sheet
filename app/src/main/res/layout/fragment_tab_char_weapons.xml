@@ -6,12 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.TabCharWeaponsFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weapons_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ARMAS"
-        android:textStyle="bold"
-        android:textSize="20sp"/>
+        android:layout_height='match_parent'
+        android:clipToPadding="false"
+        android:paddingBottom="90dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_weapon_fab"
