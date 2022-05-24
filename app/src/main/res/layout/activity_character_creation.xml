@@ -47,6 +47,24 @@
             android:orientation="vertical"
             android:layout_margin="10dp">
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/select_char_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecionar Imagem"
+                android:textSize="16sp"
+                android:background="@drawable/button_border_color"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/selected_char_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="15dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/button_border_color"/>
+
             <TextView
                 android:id="@+id/name_entry_title"
                 android:layout_width="match_parent"

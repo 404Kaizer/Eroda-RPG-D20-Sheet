@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/drawable/button_border_color.xml" value="0.164" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/drawable/edittext_border_color.xml" value="0.164" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_character_creation.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_character_sheet.xml" value="0.25416666666666665" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_info.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_inventory.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_notes.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_perfil.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_char_stats.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_atributes.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/fragment_tab_char_backpack.xml" value="0.25416666666666665" />
