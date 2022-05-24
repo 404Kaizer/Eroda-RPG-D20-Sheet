@@ -2,10 +2,7 @@ package com.example.erodad20sheet
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.erodad20sheet.fragments.TabCharPerfilFragment
 import kotlinx.android.synthetic.main.activity_character_creation.*
 import kotlinx.android.synthetic.main.activity_character_sheet.return_home_btn
 

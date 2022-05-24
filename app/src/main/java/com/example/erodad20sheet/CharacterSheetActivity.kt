@@ -2,12 +2,10 @@ package com.example.erodad20sheet
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.erodad20sheet.fragments.*
 import kotlinx.android.synthetic.main.activity_character_sheet.*
-import kotlinx.android.synthetic.main.fragment_tab_char_perfil.*
 
 
 class CharacterSheetActivity : AppCompatActivity() {
@@ -16,14 +14,14 @@ class CharacterSheetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_sheet)
 
-        val charInfoFragment = CharInfoFragment()
+        val charPerfilFragment = CharPerfilFragment()
         val charStatsFragment = CharStatsFragment()
         val charCombatFragment = CharCombatFragment()
         val charInventoryFragment = CharInventoryFragment()
         val charNotesFragment = CharNotesFragment()
 
-        setCurrentFragment(charInfoFragment)
-        toolbar_title.text = "Personagem"
+        setCurrentFragment(charPerfilFragment)
+        toolbar_title.text = "Perfil"
 
         return_home_btn.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -32,8 +30,8 @@ class CharacterSheetActivity : AppCompatActivity() {
         bottom_menu.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.char_info -> {
-                    setCurrentFragment(charInfoFragment)
-                    toolbar_title.text = "Personagem"
+                    setCurrentFragment(charPerfilFragment)
+                    toolbar_title.text = "Perfil"
                 }
                 R.id.char_stats -> {
                     setCurrentFragment(charStatsFragment)

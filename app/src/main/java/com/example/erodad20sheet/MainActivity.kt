@@ -2,20 +2,12 @@ package com.example.erodad20sheet
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Layout
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.erodad20sheet.adapters.CharactersAdapter
 import com.example.erodad20sheet.models.CharactersDataClass
-import kotlinx.android.synthetic.main.activity_character_creation.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.adapter_characters.*
-import kotlinx.android.synthetic.main.fragment_tab_char_perfil.*
 
 class MainActivity : AppCompatActivity() {
 

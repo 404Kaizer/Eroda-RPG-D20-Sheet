@@ -21,14 +21,14 @@ class CharactersAdapter(private val charactersList: ArrayList<CharactersDataClas
         private val portraitImageView = itemView.findViewById(R.id.character_portrait) as ImageView
         private val nameTextView = itemView.findViewById(R.id.character_name) as TextView
         private val raceTextView = itemView.findViewById(R.id.character_race) as TextView
-        private val classTextView = itemView.findViewById(R.id.character_class) as TextView
+        private val originTextView = itemView.findViewById(R.id.character_origin) as TextView
         private val lvlTextView = itemView.findViewById(R.id.character_lvl) as TextView
 
         fun populateAdapter(characters: CharactersDataClass) {
             portraitImageView.setImageResource(characters.portrait)
             nameTextView.text = characters.name
             raceTextView.text = characters.race
-            classTextView.text = characters.classes
+            originTextView.text = characters.origin
             lvlTextView.text = characters.lvl.toString()
         }
     }
