@@ -49,6 +49,7 @@
         android:background="@color/dark_gray"
         app:labelVisibilityMode="unlabeled"
         app:itemIconSize="35dp"
-        app:itemIconTint="@drawable/bottom_icons_color"/>
+        app:itemIconTint="@drawable/bottom_icons_color"
+        android:elevation="4dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

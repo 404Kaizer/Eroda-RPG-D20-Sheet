@@ -76,7 +76,7 @@
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
-                android:background="@color/dark_gray"/>
+                android:background="@color/darker_gray"/>
 
             <EditText android:inputType="text" android:importantForAutofill="no"
                 android:id="@+id/char_name_entry"
@@ -84,7 +84,7 @@
                 android:layout_height="48dp"
                 android:hint="Faradick Grom"
                 android:textColorHint="@color/gray"
-                android:background="@color/dark_gray"
+                android:background="@color/darker_gray"
                 android:padding="8dp"
                 android:layout_marginTop="5dp"
                 android:textSize="18sp" />
@@ -100,7 +100,7 @@
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
-                android:background="@color/dark_gray"/>
+                android:background="@color/darker_gray"/>
 
             <EditText android:inputType="text" android:importantForAutofill="no"
                 android:id="@+id/char_exp_entry"
@@ -108,7 +108,7 @@
                 android:layout_height="48dp"
                 android:hint="Nível 3 e 900 EXP "
                 android:textColorHint="@color/gray"
-                android:background="@color/dark_gray"
+                android:background="@color/darker_gray"
                 android:padding="8dp"
                 android:layout_marginTop="5dp"
                 android:textSize="18sp" />
@@ -124,7 +124,7 @@
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
-                android:background="@color/dark_gray"/>
+                android:background="@color/darker_gray"/>
 
             <EditText android:inputType="text" android:importantForAutofill="no"
                 android:id="@+id/char_race_entry"
@@ -132,7 +132,7 @@
                 android:layout_height="48dp"
                 android:hint="Anão, Masculino"
                 android:textColorHint="@color/gray"
-                android:background="@color/dark_gray"
+                android:background="@color/darker_gray"
                 android:padding="8dp"
                 android:layout_marginTop="5dp"
                 android:textSize="18sp" />
@@ -148,7 +148,7 @@
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
-                android:background="@color/dark_gray"/>
+                android:background="@color/darker_gray"/>
 
             <EditText android:inputType="text" android:importantForAutofill="no"
                 android:id="@+id/char_origin_entry"
@@ -156,7 +156,7 @@
                 android:layout_height="48dp"
                 android:hint="Clérigo e Eremita"
                 android:textColorHint="@color/gray"
-                android:background="@color/dark_gray"
+                android:background="@color/darker_gray"
                 android:padding="8dp"
                 android:layout_marginTop="5dp"
                 android:textSize="18sp" />
@@ -172,7 +172,7 @@
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
-                android:background="@color/dark_gray"/>
+                android:background="@color/darker_gray"/>
 
             <EditText android:inputType="text" android:importantForAutofill="no"
                 android:id="@+id/char_stature_entry"
@@ -181,7 +181,7 @@
                 android:layout_marginTop="5dp"
                 android:hint="80kg, 1,36m e 70 anos"
                 android:textColorHint="@color/gray"
-                android:background="@color/dark_gray"
+                android:background="@color/darker_gray"
                 android:padding="8dp"
                 android:textSize="18sp" />
 
@@ -196,7 +196,7 @@
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
-                android:background="@color/dark_gray"/>
+                android:background="@color/darker_gray"/>
 
             <EditText android:inputType="text" android:importantForAutofill="no"
                 android:id="@+id/char_alignment_entry"
@@ -205,7 +205,7 @@
                 android:layout_marginTop="5dp"
                 android:hint="Leal e Neutro"
                 android:textColorHint="@color/gray"
-                android:background="@color/dark_gray"
+                android:background="@color/darker_gray"
                 android:padding="8dp"
                 android:textSize="18sp" />
 
@@ -220,7 +220,7 @@
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
-                android:background="@color/dark_gray"/>
+                android:background="@color/darker_gray"/>
 
             <EditText android:inputType="text" android:importantForAutofill="no"
                 android:id="@+id/char_languages_entry"
@@ -229,7 +229,7 @@
                 android:layout_marginTop="5dp"
                 android:hint="Comum, Anão e Élfico"
                 android:textColorHint="@color/gray"
-                android:background="@color/dark_gray"
+                android:background="@color/darker_gray"
                 android:padding="8dp"
                 android:textSize="18sp" />
 

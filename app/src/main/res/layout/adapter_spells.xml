@@ -12,7 +12,7 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:background="@color/dark_gray"
+        android:background="@color/darker_gray"
         android:clickable="true">
 
         <TextView

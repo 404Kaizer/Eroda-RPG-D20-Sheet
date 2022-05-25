@@ -43,7 +43,7 @@
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="15dp"
         android:hint="Título"
-        android:background="@color/dark_gray"
+        android:background="@color/darker_gray"
         android:padding="8dp"
         android:textSize="20sp" />
 
@@ -57,7 +57,7 @@
         android:layout_marginVertical="15dp"
         android:gravity="start|top"
         android:hint="Descrição"
-        android:background="@color/dark_gray"
+        android:background="@color/darker_gray"
         android:padding="8dp"
         android:scrollbars="vertical"
         android:textSize="16sp"/>

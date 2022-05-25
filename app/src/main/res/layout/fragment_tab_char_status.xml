@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/defenses_container"
             android:padding="10dp"
-            android:background="@color/dark_gray">
+            android:background="@color/darker_gray">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/life_title"
@@ -105,7 +105,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginVertical="15dp"
             android:padding="10dp"
-            android:background="@color/dark_gray">
+            android:background="@color/darker_gray">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/defense_title"

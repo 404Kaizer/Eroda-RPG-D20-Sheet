@@ -12,14 +12,14 @@ class WeaponsAdapter(private val weaponsList: ArrayList<WeaponsDataClass>)
     : RecyclerView.Adapter<WeaponsAdapter.WeaponsViewHolder>() {
 
         class WeaponsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            private val quantityTextView : TextView = itemView.findViewById(R.id.weapon_quantity)
-            private val titleTextView : TextView = itemView.findViewById(R.id.weapon_title)
-            private val typeTextView : TextView = itemView.findViewById(R.id.weapon_type)
+            private val quantityTextView : TextView = itemView.findViewById(R.id.item_quantity)
+            private val titleTextView : TextView = itemView.findViewById(R.id.item_title)
+            private val typeTextView : TextView = itemView.findViewById(R.id.item_value)
             private val ammunitionTextView : TextView = itemView.findViewById(R.id.weapon_ammunition)
             private val damageTextView : TextView = itemView.findViewById(R.id.weapon_damage)
             private val executionTextView : TextView = itemView.findViewById(R.id.weapon_execution)
             private val rangeTextView : TextView = itemView.findViewById(R.id.weapon_range)
-            private val descriptionTextView : TextView = itemView.findViewById(R.id.weapon_description)
+            private val descriptionTextView : TextView = itemView.findViewById(R.id.item_description)
             private val propertiesTextView : TextView = itemView.findViewById(R.id.weapon_properties)
 
             fun populateAdapter(weapons: WeaponsDataClass) {

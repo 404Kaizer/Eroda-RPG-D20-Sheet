@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +13,7 @@
         android:theme="@style/Theme.ErodaD20Sheet">
         <activity
             android:name=".CharacterCreationActivity"
-            android:exported="false"
-            android:noHistory="true"/>
+            android:exported="false"/>
         <activity
             android:name=".NotesAddActivity"
             android:exported="false"

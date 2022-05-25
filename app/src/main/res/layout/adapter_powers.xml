@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp"
-        android:background="@color/dark_gray"
+        android:background="@color/darker_gray"
         android:clickable="true"
         android:foreground="?attr/selectableItemBackgroundBorderless"
         android:padding="10dp">
