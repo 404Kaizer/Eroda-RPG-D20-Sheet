@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="18dp"
         android:src="@drawable/ic_add_drawable"
-        android:backgroundTint="@color/red"
+        app:backgroundTint="@color/red"
         app:rippleColor="@color/white"
         android:contentDescription="Adicionar Magia" />
 

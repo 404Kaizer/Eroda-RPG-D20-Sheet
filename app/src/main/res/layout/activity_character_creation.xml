@@ -19,7 +19,7 @@
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_return_mainscreen"
-            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?selectableItemBackgroundBorderless"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/toolbar_title"
@@ -71,7 +71,6 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="Nome"
-                android:textColor="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
@@ -95,7 +94,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Nível e Experiência"
-                android:textColor="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
@@ -119,7 +117,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Raça e Sexo"
-                android:textColor="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
@@ -143,7 +140,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Classe e Antecedente"
-                android:textColor="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
@@ -167,7 +163,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Peso, Altura e Idade"
-                android:textColor="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
@@ -191,7 +186,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Tendência"
-                android:textColor="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
@@ -215,7 +209,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Idiomas Conhecidos"
-                android:textColor="?attr/colorOnPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="10dp"
@@ -245,7 +238,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="18dp"
         android:contentDescription="Adicionar Nota"
-        android:backgroundTint="@color/red"
+        app:backgroundTint="@color/red"
         android:src="@drawable/ic_save_drawable"
         app:maxImageSize="30dp"/>
 

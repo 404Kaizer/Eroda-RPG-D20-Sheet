@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import com.example.erodad20sheet.fragments.*
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 
-
 class CharacterSheetActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

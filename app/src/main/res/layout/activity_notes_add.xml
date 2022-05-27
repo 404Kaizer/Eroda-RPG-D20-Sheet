@@ -19,7 +19,7 @@
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_return_mainscreen"
-            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?selectableItemBackgroundBorderless"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/toolbar_title"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="18dp"
         android:contentDescription="Adicionar Nota"
-        android:backgroundTint="@color/red"
+        app:backgroundTint="@color/red"
         android:src="@drawable/ic_save_drawable"
         app:maxImageSize="30dp"/>
 

@@ -30,4 +30,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CharacterCreationActivity::class.java))
         }
     }
+
+    override fun onBackPressed() {
+        finish()
+    }
 }

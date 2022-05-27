@@ -19,7 +19,7 @@
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_return_mainscreen"
-            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?selectableItemBackgroundBorderless"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/toolbar_title"

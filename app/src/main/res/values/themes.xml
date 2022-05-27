@@ -20,5 +20,5 @@
     </style>
     <style name="Theme.ErodaD20Sheet.AppBarOverlay"
         parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="Theme.ErodaD20Sheet.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.ErodaD20Sheet.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 </resources>
