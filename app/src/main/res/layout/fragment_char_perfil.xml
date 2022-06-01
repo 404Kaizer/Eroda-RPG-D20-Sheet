@@ -32,6 +32,7 @@
                 android:textSize="22sp"/>
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/edit_char_info_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
@@ -125,7 +126,6 @@
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:hint="Escreva quais são suas qualidades e defeitos..."
-                android:textColorHint="@color/teal_700"
                 android:background="@drawable/edittext_border_color"/>
 
             <TextView
@@ -150,7 +150,6 @@
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:hint="Escreva sobre o que você gosta ou não..."
-                android:textColorHint="@color/teal_700"
                 android:background="@drawable/edittext_border_color"/>
 
             <TextView
@@ -175,7 +174,6 @@
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:hint="Escreva sobre seus medos e traumas..."
-                android:textColorHint="@color/teal_700"
                 android:background="@drawable/edittext_border_color"/>
 
             <TextView
@@ -201,7 +199,6 @@
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:hint="Escreva sobre sua história e o que deseja alcançar..."
-                android:textColorHint="@color/teal_700"
                 android:background="@drawable/edittext_border_color"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>

@@ -20,9 +20,11 @@
             android:id="@+id/character_portrait"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_placeholder"/>
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete_character_btn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -50,11 +52,12 @@
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <com.google.android.flexbox.FlexboxLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
+                app:flexDirection="row"
+                app:justifyContent="center"
+                app:flexWrap="wrap"
                 app:layout_constraintTop_toBottomOf="@id/character_name">
 
                 <TextView
@@ -79,7 +82,7 @@
                     android:text="Nível"
                     android:textSize="20sp"/>
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.google.android.flexbox.FlexboxLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

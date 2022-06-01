@@ -1,45 +1,58 @@
 package com.example.erodad20sheet.adapters
 
-import android.graphics.drawable.Drawable
-import android.media.Image
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.example.erodad20sheet.CharacterSheetActivity
 import com.example.erodad20sheet.R
+import com.example.erodad20sheet.fragments.CharPerfilFragment
 import com.example.erodad20sheet.models.CharactersDataClass
-import kotlin.math.nextUp
-import kotlin.random.Random
+import com.example.erodad20sheet.models.CharactersDataObject
+import com.example.erodad20sheet.models.ItemsDataObject
+import kotlinx.android.synthetic.main.adapter_characters.view.*
 
 class CharactersAdapter(private val charactersList: ArrayList<CharactersDataClass>)
     : RecyclerView.Adapter<CharactersAdapter.CharactersViewHolder>() {
 
     class CharactersViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        private val portraitImageView = itemView.findViewById(R.id.character_portrait) as ImageView
-        private val nameTextView = itemView.findViewById(R.id.character_name) as TextView
-        private val raceTextView = itemView.findViewById(R.id.character_race) as TextView
-        private val originTextView = itemView.findViewById(R.id.character_origin) as TextView
-        private val lvlTextView = itemView.findViewById(R.id.character_lvl) as TextView
-
-        fun populateAdapter(characters: CharactersDataClass) {
-            portraitImageView.setImageResource(characters.portrait)
-            nameTextView.text = characters.name
-            raceTextView.text = characters.race
-            originTextView.text = characters.origin
-            lvlTextView.text = characters.lvl.toString()
-        }
+        var deleteCharBtn: ImageView = itemView.delete_character_btn
+        var charPortrait: ImageView = itemView.character_portrait
+        var charName: TextView = itemView.character_name
+        var charRace: TextView = itemView.character_race
+        var charOrigin: TextView = itemView.character_origin
+        var charExp: TextView = itemView.character_lvl
+        var listItemLayout: ConstraintLayout = itemView.characters_container
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_characters, parent, false)
-        return CharactersViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersAdapter.CharactersViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.adapter_characters, parent, false)
+        return CharactersViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: CharactersViewHolder, position: Int) {
-        holder.populateAdapter(charactersList[position])
+        holder.charPortrait.setImageDrawable(charactersList[position].portrait)
+        holder.charName.text = charactersList[position].name
+        holder.charRace.text = charactersList[position].race
+        holder.charOrigin.text = charactersList[position].origin
+        holder.charExp.text = charactersList[position].exp
+        holder.listItemLayout.setOnClickListener {
+            val intent = Intent(holder.itemView.context, CharacterSheetActivity::class.java)
+            intent.putExtra("ID", position)
+            holder.itemView.context.startActivity(intent)
+        }
+        holder.deleteCharBtn.setOnClickListener {
+            val items = CharactersDataObject.charactersListData
+            items.removeAt(position)
+            notifyItemRemoved(position)
+            notifyItemRangeChanged(position, items.size)
+        }
     }
 
     override fun getItemCount(): Int {

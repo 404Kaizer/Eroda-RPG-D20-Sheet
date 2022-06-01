@@ -4,10 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.erodad20sheet.adapters.CharactersAdapter
+import com.example.erodad20sheet.fragments.CharPerfilFragment
 import com.example.erodad20sheet.models.CharactersDataClass
+import com.example.erodad20sheet.models.CharactersDataObject
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.adapter_characters.*
+import kotlinx.android.synthetic.main.adapter_characters.view.*
+import kotlinx.android.synthetic.main.adapter_items.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,19 +19,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val character1 = CharactersDataClass(R.drawable.portrait_char1, "Hazard Lefou", "Tiefling", "Necromante", 5)
-        val character2 = CharactersDataClass(R.drawable.portrait_char10, "Harzok", "Tiefling", "Bárbaro", 11)
-        val character3 = CharactersDataClass(R.drawable.portrait_char11, "Sanin", "Humano", "Samurai", 3)
-        val character4 = CharactersDataClass(R.drawable.portrait_char3, "Sombra", "Elfo", "Ladino", 9)
-        val character5 = CharactersDataClass(R.drawable.portrait_char9, "Leonnard", "Gnomo", "Ladino", 15)
-        val character6 = CharactersDataClass(R.drawable.portrait_char7, "Leon Ebonheart", "Humano", "Guerreiro", 13)
-        val charactersArrayList = arrayListOf(character1, character2, character3, character4, character5, character6)
-        val charactersRecyclerView = findViewById<RecyclerView>(R.id.char_list_recycler)
-        charactersRecyclerView.layoutManager = LinearLayoutManager(this)
-        charactersRecyclerView.adapter = CharactersAdapter(charactersArrayList)
-
+        char_list_recycler.adapter = CharactersAdapter(CharactersDataObject.getAllData() as ArrayList<CharactersDataClass>)
+        char_list_recycler.layoutManager = LinearLayoutManager(this)
         add_char_fab.setOnClickListener {
-            startActivity(Intent(this, CharacterCreationActivity::class.java))
+            val intent = Intent(this, CharacterCreationActivity::class.java)
+            startActivity(intent)
         }
     }
 

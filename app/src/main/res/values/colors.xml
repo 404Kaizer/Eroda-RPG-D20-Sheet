@@ -10,6 +10,8 @@
     <color name="darker_gray">#131417</color>
     <color name="dark_gray">#1A1B20</color>
     <color name="red">#FF0000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
     <color name="purple">#8800FF</color>
     <color name="blue">#0000FF</color>
     <color name="gray">#006A69</color>

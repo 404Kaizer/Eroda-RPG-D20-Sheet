@@ -2,9 +2,10 @@ package com.example.erodad20sheet
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.erodad20sheet.fragments.CharPerfilFragment
+import com.example.erodad20sheet.models.CharactersDataObject
 import kotlinx.android.synthetic.main.activity_character_creation.*
 import kotlinx.android.synthetic.main.activity_character_sheet.return_home_btn
 
@@ -28,12 +29,33 @@ class CharacterCreationActivity : AppCompatActivity() {
             pickImageFromGallery()
         }
 
-        return_home_btn.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+        create_new_char_float_btn.setOnClickListener {
+            if(selectedImgView.drawable != null
+                && char_name_entry.text.toString().trim{it <= ' '}.isNotEmpty()
+                && char_exp_entry.text.toString().trim{it <= ' '}.isNotEmpty()
+                && char_race_entry.text.toString().trim{it <= ' '}.isNotEmpty()
+                && char_origin_entry.text.toString().trim{it <= ' '}.isNotEmpty()) {
+
+                var setCharPortrait = selectedImgView.drawable
+                var setCharName = char_name_entry.text.toString()
+                var setCharRace = char_race_entry.text.toString()
+                var setCharOrigin = char_origin_entry.text.toString()
+                var setCharExp = char_exp_entry.text.toString()
+
+                CharactersDataObject.setData(setCharPortrait, setCharName, setCharRace, setCharOrigin, setCharExp)
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                if(selectedImgView.drawable == null) {
+                    Toast.makeText(this, "Selecione Uma Imagem Antes de Continuar", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Preencha os Campos Necessários * Antes de Continuar", Toast.LENGTH_LONG).show()
+                }
+            }
         }
 
-        create_new_char_float_btn.setOnClickListener {
-            startActivity(Intent(this, CharacterSheetActivity::class.java))
+        return_home_btn.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 
@@ -48,5 +70,9 @@ class CharacterCreationActivity : AppCompatActivity() {
         if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK) {
             selectedImgView.setImageURI(data?.data)
         }
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }
