@@ -15,7 +15,7 @@
         android:background="@color/dark_gray">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/return_home_btn"
+            android:id="@+id/notes_return_home_btn"
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_return_mainscreen"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Nova Anotação"
+            android:text="Adicionar Anotação"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="24sp"
@@ -34,7 +34,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <EditText android:inputType="text" android:importantForAutofill="no"
-        android:id="@+id/list_item_title_entry"
+        android:id="@+id/list_note_title_entry"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
@@ -48,10 +48,10 @@
         android:textSize="20sp" />
 
     <EditText android:inputType="text" android:importantForAutofill="no"
-        android:id="@+id/list_item_value_entry"
+        android:id="@+id/list_note_priority_entry"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        app:layout_constraintTop_toBottomOf="@id/list_item_title_entry"
+        app:layout_constraintTop_toBottomOf="@id/list_note_title_entry"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="15dp"
@@ -62,11 +62,11 @@
         android:textSize="16sp" />
 
     <EditText android:inputType="textMultiLine" android:importantForAutofill="no"
-        android:id="@+id/list_item_desc_entry"
+        android:id="@+id/list_note_desc_entry"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/list_item_value_entry"
-        app:layout_constraintBottom_toTopOf="@id/save_item_float_btn"
+        app:layout_constraintTop_toBottomOf="@id/list_note_priority_entry"
+        app:layout_constraintBottom_toTopOf="@id/save_note_float_btn"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="15dp"
         android:gravity="start|top"
@@ -80,9 +80,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="@id/save_item_float_btn"
+        app:layout_constraintTop_toTopOf="@id/save_note_float_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/save_item_float_btn"
+        app:layout_constraintBottom_toBottomOf="@id/save_note_float_btn"
         android:layout_marginHorizontal="15dp">
 
         <View
@@ -142,7 +142,7 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_item_float_btn"
+        android:id="@+id/save_note_float_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

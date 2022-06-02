@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/items_container"
+        android:id="@+id/weapons_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,7 +17,7 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/item_quantity"
+            android:id="@+id/weapon_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,21 +31,35 @@
             android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/item_title"
+            android:id="@+id/weapon_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/item_quantity"
-            app:layout_constraintTop_toTopOf="@id/item_quantity"
-            app:layout_constraintBottom_toBottomOf="@id/item_quantity"
+            app:layout_constraintStart_toEndOf="@id/weapon_quantity"
+            app:layout_constraintTop_toTopOf="@id/weapon_quantity"
+            app:layout_constraintBottom_toBottomOf="@id/weapon_quantity"
             android:layout_marginHorizontal="5dp"
             android:text="Exemplo"
             android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/item_value"
+            android:id="@+id/weapon_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/item_quantity"
+            app:layout_constraintTop_toBottomOf="@id/weapon_quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:text="Exemplo"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/weapon_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/weapon_type"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/weapon_ammunition"
             android:layout_marginHorizontal="5dp"
@@ -62,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_value"
+            app:layout_constraintTop_toBottomOf="@id/weapon_value"
             android:ellipsize="none"
             android:scrollHorizontally="false"
             android:text="Exemplo"
@@ -113,12 +127,11 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/item_description"
+            android:id="@+id/weapons_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/weapon_range"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/weapon_properties"
             android:layout_marginHorizontal="5dp"
             android:layout_marginTop="5dp"
             android:ellipsize="none"
@@ -131,7 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_description"
+            app:layout_constraintTop_toBottomOf="@id/weapons_description"
             android:layout_marginHorizontal="5dp"
             android:layout_marginTop="5dp"
             android:ellipsize="none"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemsAddActivity"
+    tools:context=".SkillsAddActivity"
     android:background="?attr/colorOnPrimary">
 
     <androidx.appcompat.widget.Toolbar
@@ -15,7 +15,7 @@
         android:background="@color/dark_gray">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/items_return_home_btn"
+            android:id="@+id/skills_return_home_btn"
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_return_mainscreen"
@@ -26,79 +26,22 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Novo Item"
+            android:text="Adicionar Perícia"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="24sp"
             android:layout_marginHorizontal="30dp"/>
     </androidx.appcompat.widget.Toolbar>
 
-    <com.google.android.flexbox.FlexboxLayout
-        android:id="@+id/item_title_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
-        app:flexDirection="row"
-        app:justifyContent="space_between"
-        android:layout_margin="15dp">
-
-        <EditText android:inputType="text" android:importantForAutofill="no"
-            android:id="@+id/list_item_quantity_entry"
-            android:layout_width="65dp"
-            android:layout_height="48dp"
-            android:hint="1x"
-            android:gravity="center"
-            android:background="@color/darker_gray"
-            android:padding="8dp"
-            android:textSize="20sp"
-            android:layout_marginEnd="15dp"/>
-
-        <EditText android:inputType="text" android:importantForAutofill="no"
-            android:id="@+id/list_item_title_entry"
-            android:layout_width="300dp"
-            android:layout_height="48dp"
-            android:hint="Nome do Item"
-            android:background="@color/darker_gray"
-            android:padding="8dp"
-            android:textSize="20sp"/>
-
-    </com.google.android.flexbox.FlexboxLayout>
-
-    <EditText android:inputType="text" android:importantForAutofill="no"
-        android:id="@+id/list_item_value_entry"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        app:layout_constraintTop_toBottomOf="@id/item_title_container"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="15dp"
-        android:hint="Valor"
-        android:background="@color/darker_gray"
-        android:padding="8dp"
-        android:textSize="16sp" />
-
-    <EditText android:inputType="textMultiLine" android:importantForAutofill="no"
-        android:id="@+id/list_item_desc_entry"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/list_item_value_entry"
-        app:layout_constraintBottom_toTopOf="@id/save_item_float_btn"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="15dp"
-        android:gravity="start|top"
-        android:hint="Descrição"
-        android:background="@color/darker_gray"
-        android:padding="8dp"
-        android:scrollbars="vertical"
-        android:textSize="16sp"/>
-
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/colors_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="@id/save_item_float_btn"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/save_item_float_btn"
-        android:layout_marginHorizontal="15dp">
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp">
 
         <View
             android:id="@+id/turn_red"
@@ -156,14 +99,72 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/skill_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/colors_container"
+        app:flexDirection="row"
+        app:justifyContent="space_between"
+        android:layout_margin="15dp"
+        app:alignItems="center"
+        android:background="@color/darker_gray">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/skill_check"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:buttonTint="@color/white"
+            android:layout_margin="10dp"/>
+
+        <EditText android:inputType="text" android:importantForAutofill="no"
+            android:id="@+id/list_skill_title_entry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@id/colors_container"
+            android:hint="Nome da Perícia"
+            android:background="@color/darker_gray"
+            android:padding="8dp"
+            android:textSize="20sp"/>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <EditText android:inputType="text" android:importantForAutofill="no"
+        android:id="@+id/list_skill_atribute_entry"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/skill_title_container"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:hint="Atributo Relacionado"
+        android:background="@color/darker_gray"
+        android:padding="8dp"
+        android:textSize="16sp" />
+
+    <EditText android:inputType="text" android:importantForAutofill="no"
+        android:id="@+id/list_skill_value_entry"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/list_skill_atribute_entry"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center"
+        android:hint="Valor"
+        android:background="@color/darker_gray"
+        android:padding="8dp"
+        android:textSize="20sp" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_item_float_btn"
+        android:id="@+id/save_skill_float_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="18dp"
-        android:contentDescription="Adicionar Item"
+        android:contentDescription="Adicionar Habilidade"
         app:backgroundTint="@color/red"
         android:src="@drawable/ic_save_drawable"
         app:maxImageSize="30dp"/>

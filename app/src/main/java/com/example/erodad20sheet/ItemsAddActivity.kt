@@ -4,16 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.erodad20sheet.fragments.CharInventoryFragment
-import com.example.erodad20sheet.models.CharactersDataObject
 import com.example.erodad20sheet.models.ItemsDataObject
-import kotlinx.android.synthetic.main.activity_character_creation.*
 import kotlinx.android.synthetic.main.activity_items_add.*
 
 class ItemsAddActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_items_add)
+
+        items_return_home_btn.setOnClickListener {
+            finish()
+        }
 
         save_item_float_btn.setOnClickListener {
             if(list_item_quantity_entry.text.toString().trim{it <= ' '}.isNotEmpty()

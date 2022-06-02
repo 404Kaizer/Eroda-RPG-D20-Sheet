@@ -1,11 +1,12 @@
 package com.example.erodad20sheet
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.erodad20sheet.models.NotesDataObject
 import kotlinx.android.synthetic.main.activity_notes_add.*
-import kotlinx.android.synthetic.main.activity_notes_add.return_home_btn
 
 class NotesAddActivity : AppCompatActivity() {
 
@@ -15,12 +16,24 @@ class NotesAddActivity : AppCompatActivity() {
 
         changeNoteColor()
 
-        return_home_btn.setOnClickListener {
+        notes_return_home_btn.setOnClickListener {
             finish()
         }
 
-        save_item_float_btn.setOnClickListener {
-            finish()
+        save_note_float_btn.setOnClickListener {
+            if(list_note_title_entry.text.toString().trim{it <= ' '}.isNotEmpty()
+                && list_note_priority_entry.text.toString().trim{it <= ' '}.isNotEmpty()
+                && list_note_desc_entry.text.toString().trim{it <= ' '}.isNotEmpty()) {
+
+                var setNoteTitle = list_note_title_entry.text.toString()
+                var setNotePriority = list_note_priority_entry.text.toString()
+                var setNoteDescription = list_note_desc_entry.text.toString()
+
+                NotesDataObject.setData(setNoteTitle, setNotePriority, setNoteDescription)
+                val intent = Intent(this, CharacterSheetActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                finish()
+            }
         }
     }
 
@@ -33,75 +46,75 @@ class NotesAddActivity : AppCompatActivity() {
         val turnDark = findViewById<View>(R.id.turn_dark)
 
         turnRed.setOnClickListener {
-            list_item_desc_entry.setBackgroundColor(Color.parseColor("red"))
-            list_item_desc_entry.setTextColor(Color.parseColor("white"))
-            list_item_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_value_entry.setBackgroundColor(Color.parseColor("red"))
-            list_item_value_entry.setTextColor(Color.parseColor("white"))
-            list_item_value_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_title_entry.setBackgroundColor(Color.parseColor("red"))
-            list_item_title_entry.setTextColor(Color.parseColor("white"))
-            list_item_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_desc_entry.setBackgroundColor(Color.parseColor("red"))
+            list_note_desc_entry.setTextColor(Color.parseColor("white"))
+            list_note_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_priority_entry.setBackgroundColor(Color.parseColor("red"))
+            list_note_priority_entry.setTextColor(Color.parseColor("white"))
+            list_note_priority_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_title_entry.setBackgroundColor(Color.parseColor("red"))
+            list_note_title_entry.setTextColor(Color.parseColor("white"))
+            list_note_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
         }
 
         turnYellow.setOnClickListener {
-            list_item_desc_entry.setBackgroundColor(Color.parseColor("yellow"))
-            list_item_desc_entry.setTextColor(Color.parseColor("black"))
-            list_item_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_value_entry.setBackgroundColor(Color.parseColor("yellow"))
-            list_item_value_entry.setTextColor(Color.parseColor("black"))
-            list_item_value_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_title_entry.setBackgroundColor(Color.parseColor("yellow"))
-            list_item_title_entry.setTextColor(Color.parseColor("black"))
-            list_item_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_desc_entry.setBackgroundColor(Color.parseColor("yellow"))
+            list_note_desc_entry.setTextColor(Color.parseColor("black"))
+            list_note_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_priority_entry.setBackgroundColor(Color.parseColor("yellow"))
+            list_note_priority_entry.setTextColor(Color.parseColor("black"))
+            list_note_priority_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_title_entry.setBackgroundColor(Color.parseColor("yellow"))
+            list_note_title_entry.setTextColor(Color.parseColor("black"))
+            list_note_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
         }
 
         turnGreen.setOnClickListener {
-            list_item_desc_entry.setBackgroundColor(Color.parseColor("green"))
-            list_item_desc_entry.setTextColor(Color.parseColor("black"))
-            list_item_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_value_entry.setBackgroundColor(Color.parseColor("green"))
-            list_item_value_entry.setTextColor(Color.parseColor("black"))
-            list_item_value_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_title_entry.setBackgroundColor(Color.parseColor("green"))
-            list_item_title_entry.setTextColor(Color.parseColor("black"))
-            list_item_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_desc_entry.setBackgroundColor(Color.parseColor("green"))
+            list_note_desc_entry.setTextColor(Color.parseColor("black"))
+            list_note_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_priority_entry.setBackgroundColor(Color.parseColor("green"))
+            list_note_priority_entry.setTextColor(Color.parseColor("black"))
+            list_note_priority_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_title_entry.setBackgroundColor(Color.parseColor("green"))
+            list_note_title_entry.setTextColor(Color.parseColor("black"))
+            list_note_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
         }
 
         turnBlue.setOnClickListener {
-            list_item_desc_entry.setBackgroundColor(Color.parseColor("blue"))
-            list_item_desc_entry.setTextColor(Color.parseColor("white"))
-            list_item_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_value_entry.setBackgroundColor(Color.parseColor("blue"))
-            list_item_desc_entry.setTextColor(Color.parseColor("white"))
-            list_item_value_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_title_entry.setBackgroundColor(Color.parseColor("blue"))
-            list_item_desc_entry.setTextColor(Color.parseColor("white"))
-            list_item_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_desc_entry.setBackgroundColor(Color.parseColor("blue"))
+            list_note_desc_entry.setTextColor(Color.parseColor("white"))
+            list_note_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_priority_entry.setBackgroundColor(Color.parseColor("blue"))
+            list_note_priority_entry.setTextColor(Color.parseColor("white"))
+            list_note_priority_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_title_entry.setBackgroundColor(Color.parseColor("blue"))
+            list_note_title_entry.setTextColor(Color.parseColor("white"))
+            list_note_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
         }
 
         turnPurple.setOnClickListener {
-            list_item_desc_entry.setBackgroundColor(Color.parseColor("purple"))
-            list_item_desc_entry.setTextColor(Color.parseColor("white"))
-            list_item_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_value_entry.setBackgroundColor(Color.parseColor("purple"))
-            list_item_value_entry.setTextColor(Color.parseColor("white"))
-            list_item_value_entry.setHintTextColor(Color.parseColor("#1A1B20"))
-            list_item_title_entry.setBackgroundColor(Color.parseColor("purple"))
-            list_item_title_entry.setTextColor(Color.parseColor("white"))
-            list_item_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_desc_entry.setBackgroundColor(Color.parseColor("purple"))
+            list_note_desc_entry.setTextColor(Color.parseColor("white"))
+            list_note_desc_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_priority_entry.setBackgroundColor(Color.parseColor("purple"))
+            list_note_priority_entry.setTextColor(Color.parseColor("white"))
+            list_note_priority_entry.setHintTextColor(Color.parseColor("#1A1B20"))
+            list_note_title_entry.setBackgroundColor(Color.parseColor("purple"))
+            list_note_title_entry.setTextColor(Color.parseColor("white"))
+            list_note_title_entry.setHintTextColor(Color.parseColor("#1A1B20"))
         }
 
         turnDark.setOnClickListener {
-            list_item_desc_entry.setBackgroundColor(Color.parseColor("#131417"))
-            list_item_desc_entry.setTextColor(Color.parseColor("white"))
-            list_item_desc_entry.setHintTextColor(Color.parseColor("gray"))
-            list_item_value_entry.setBackgroundColor(Color.parseColor("#131417"))
-            list_item_value_entry.setTextColor(Color.parseColor("white"))
-            list_item_value_entry.setHintTextColor(Color.parseColor("gray"))
-            list_item_title_entry.setBackgroundColor(Color.parseColor("#131417"))
-            list_item_title_entry.setTextColor(Color.parseColor("white"))
-            list_item_title_entry.setHintTextColor(Color.parseColor("gray"))
+            list_note_desc_entry.setBackgroundColor(Color.parseColor("#131417"))
+            list_note_desc_entry.setTextColor(Color.parseColor("white"))
+            list_note_desc_entry.setHintTextColor(Color.parseColor("gray"))
+            list_note_priority_entry.setBackgroundColor(Color.parseColor("#131417"))
+            list_note_priority_entry.setTextColor(Color.parseColor("white"))
+            list_note_priority_entry.setHintTextColor(Color.parseColor("gray"))
+            list_note_title_entry.setBackgroundColor(Color.parseColor("#131417"))
+            list_note_title_entry.setTextColor(Color.parseColor("white"))
+            list_note_title_entry.setHintTextColor(Color.parseColor("gray"))
         }
     }
 }

@@ -37,9 +37,9 @@ class ItemsAdapter(private val itemsList: ArrayList<ItemsDataClass>)
         holder.itemValue.text = itemsList[position].value
         holder.itemDescription.text = itemsList[position].description
         holder.listItemLayout.setOnClickListener {
-            val intent = Intent(holder.itemTitle.context, ItemsAddActivity::class.java)
-            intent.putExtra("ID", position)
-            holder.itemTitle.context.startActivity(intent)
+            val intent = Intent(holder.itemView.context, ItemsAddActivity::class.java)
+            intent.putExtra("Item_ID", position)
+            holder.itemView.context.startActivity(intent)
         }
         holder.deleteItemBtn.setOnClickListener {
             val items = ItemsDataObject.itemsListData

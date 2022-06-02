@@ -16,13 +16,17 @@
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_items_add.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_notes_add.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_power_add.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_skills_add.xml" value="0.264" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_spells_add.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/activity_weapons_add.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_characters.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_item.xml" value="0.253125" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_items.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_notes.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_powers.xml" value="0.264" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_skills.xml" value="0.253125" />
-        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_spells.xml" value="0.253125" />
+        <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_spells.xml" value="0.4" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/adapter_weapons.xml" value="0.264" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/dialog_edit_progressbar.xml" value="0.253125" />
         <entry key="..\:/Users/Hugo/Documents/GitHub/Eroda-RPG-D20-Sheet/app/src/main/res/layout/dialog_progressbar_edit.xml" value="0.2" />

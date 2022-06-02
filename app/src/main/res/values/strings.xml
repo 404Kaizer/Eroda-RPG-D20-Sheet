@@ -5,6 +5,7 @@
     <string name="char_combate_title">Combate</string>
     <string name="char_stats_title">Atributos</string>
     <string name="char_info_title">Informações</string>
+    <string name="char_displayed_name" />
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 </resources>

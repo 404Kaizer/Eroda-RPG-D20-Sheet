@@ -15,7 +15,7 @@
         android:background="@color/dark_gray">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/return_home_btn"
+            android:id="@+id/main_return_home_btn"
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_return_mainscreen"

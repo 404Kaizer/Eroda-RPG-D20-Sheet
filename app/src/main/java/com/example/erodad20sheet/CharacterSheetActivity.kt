@@ -2,12 +2,10 @@ package com.example.erodad20sheet
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.erodad20sheet.fragments.*
 import kotlinx.android.synthetic.main.activity_character_sheet.*
-import kotlinx.android.synthetic.main.activity_character_sheet.return_home_btn
 import kotlinx.android.synthetic.main.activity_character_sheet.toolbar_title
 
 class CharacterSheetActivity : AppCompatActivity() {
@@ -25,7 +23,7 @@ class CharacterSheetActivity : AppCompatActivity() {
         setCurrentFragment(charPerfilFragment)
         toolbar_title.text = "Perfil"
 
-        return_home_btn.setOnClickListener {
+        main_return_home_btn.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
 

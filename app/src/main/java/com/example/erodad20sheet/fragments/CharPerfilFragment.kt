@@ -9,7 +9,6 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.example.erodad20sheet.CharacterCreationActivity
 import com.example.erodad20sheet.R
-import kotlinx.android.synthetic.main.fragment_char_perfil.*
 
 
 class CharPerfilFragment : Fragment() {

@@ -4,10 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.erodad20sheet.fragments.CharPerfilFragment
 import com.example.erodad20sheet.models.CharactersDataObject
 import kotlinx.android.synthetic.main.activity_character_creation.*
-import kotlinx.android.synthetic.main.activity_character_sheet.return_home_btn
 
 class CharacterCreationActivity : AppCompatActivity() {
 
@@ -54,7 +52,7 @@ class CharacterCreationActivity : AppCompatActivity() {
             }
         }
 
-        return_home_btn.setOnClickListener {
+        char_creation_return_home_btn.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
     }

@@ -1,7 +1,5 @@
 package com.example.erodad20sheet.models
 
-import com.example.erodad20sheet.adapters.ItemsAdapter
-
 object ItemsDataObject {
     var itemsListData = mutableListOf<ItemsDataClass>()
 

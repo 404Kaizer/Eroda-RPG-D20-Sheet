@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeaponsAddActivity"
+    android:background="?attr/colorOnPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/dark_gray">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/weapons_return_home_btn"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_return_mainscreen"
+            android:background="?selectableItemBackgroundBorderless"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Adicionar Arma"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="30dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_menu"
+        app:layout_constraintBottom_toBottomOf="@id/save_weapon_float_btn"
+        android:paddingBottom="90dp"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/colors_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp">
+
+                <View
+                    android:id="@+id/turn_red"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/red"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"/>
+
+                <View
+                    android:id="@+id/turn_yellow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/yellow"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"/>
+
+                <View
+                    android:id="@+id/turn_green"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/green"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"/>
+
+                <View
+                    android:id="@+id/turn_blue"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/blue"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"/>
+
+                <View
+                    android:id="@+id/turn_purple"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/purple"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"/>
+
+                <View
+                    android:id="@+id/turn_dark"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/darker_gray"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/weapon_title_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/colors_container"
+                app:flexDirection="row"
+                app:justifyContent="space_between"
+                android:layout_margin="15dp">
+
+                <EditText android:inputType="text" android:importantForAutofill="no"
+                    android:id="@+id/list_weapon_quantity_entry"
+                    android:layout_width="65dp"
+                    android:layout_height="48dp"
+                    android:hint="1x"
+                    android:gravity="center"
+                    android:background="@color/darker_gray"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="15dp"/>
+
+                <EditText android:inputType="text" android:importantForAutofill="no"
+                    android:id="@+id/list_weapon_title_entry"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:hint="Nome do Item"
+                    android:background="@color/darker_gray"
+                    android:padding="8dp"
+                    android:textSize="20sp"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_type_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/weapon_title_container"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Tipo da Arma (Comum, Marcial...)"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_value_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/list_weapon_type_entry"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Valor"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_ammunition_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/list_weapon_value_entry"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Munição"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_damage_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/list_weapon_ammunition_entry"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Dano"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_execution_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/list_weapon_damage_entry"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Tipo de Execução (Ação, Ação Bônus...)"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_range_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/list_weapon_execution_entry"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Alcance"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <EditText android:inputType="textMultiLine" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_desc_entry"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toBottomOf="@id/list_weapon_range_entry"
+                app:layout_constraintBottom_toTopOf="@id/list_weapon_properties_entry"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="start|top"
+                android:hint="Descrição"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:textSize="16sp"/>
+
+            <EditText android:inputType="text" android:importantForAutofill="no"
+                android:id="@+id/list_weapon_properties_entry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/list_weapon_desc_entry"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Custos da Habilidade"
+                android:background="@color/darker_gray"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_weapon_float_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="18dp"
+        android:contentDescription="Adicionar Arma"
+        app:backgroundTint="@color/red"
+        android:src="@drawable/ic_save_drawable"
+        app:maxImageSize="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
 package com.example.erodad20sheet.adapters
 
+import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
-import android.net.Uri
-import android.os.Bundle
+import android.content.SharedPreferences
+import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,11 +14,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.erodad20sheet.CharacterSheetActivity
 import com.example.erodad20sheet.R
-import com.example.erodad20sheet.fragments.CharPerfilFragment
 import com.example.erodad20sheet.models.CharactersDataClass
 import com.example.erodad20sheet.models.CharactersDataObject
-import com.example.erodad20sheet.models.ItemsDataObject
 import kotlinx.android.synthetic.main.adapter_characters.view.*
+
 
 class CharactersAdapter(private val charactersList: ArrayList<CharactersDataClass>)
     : RecyclerView.Adapter<CharactersAdapter.CharactersViewHolder>() {
